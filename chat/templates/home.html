@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>Tornado + WebSocket = Chat Web App</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Language" content="pt-br" />
+
+		<link rel="shortcut icon" href="/static/img/favicon.png" />
+	
+		<link type="text/css" rel="stylesheet" media="screen" href="/static/css/chat.css" />
+
+		<script src="/static/js/jquery-1.8.0.min.js"></script>
+		<script src="/static/js/chat.js"></script>
+	</head>
+
+	<body>
+	
+		<div class="header">
+			<div class="header-container">
+				<a href="http://caniuse.com/websockets" target="_suporteWebSocket" class="suporte-websocket">A versão do meu Browser suporta Web Sockets?</a>
+			</div>
+		</div>
+	
+	
+		<div class="page">
+			
+			<div class="page-container">
+
+				<div class="box-left">
+					<img class="tornado-img" src="/static/img/tornado.png">
+					<div class="chat-mais">+</div>
+					<img class="websockets-img" src="/static/img/websockets.png">
+					<div class="chat-igual">=</div>
+					<img class="chat-img" src="/static/img/chat.png">
+					<div class="chat-txt">Chat Web App</div>
+				
+				</div>
+
+				<div class="box-right">
+
+					<div class="usuarios-conectados">
+						<span id="qtd">?</span> usuário(s) conectado(s) agora!
+					</div>
+					
+					<div class="entrar-sair">
+						<input type="text" name="user" maxlength="16" placeholder="nome/nickname" class="user">
+						<a href="#" class="entrar">entrar</a>
+					</div>
+					
+					<div id="msg">
+					
+						<div class="item-msg">
+							<div class="header-msg"><span>Chiquinho</span> em 28/04/2013 20:38:29</div>
+							<div class="texto-msg">Opa galera esse chat é show de bola. Estou me divertindo bastante.</div>
+						</div>
+
+						<div class="item-msg">
+							<div class="header-msg"><span>Zezinho</span> em 28/04/2013 21:08:15</div>
+							<div class="texto-msg">Queria falar muita coisa, mas não estou lembrando de nada para falar aqui... então vou dizer que esse projeto ficou chinfra negra... muito show de bola mesmo como eu nunca ví antes na minha vida toda inteirinha.</div>
+						</div>
+
+						<div class="item-msg">
+							<div class="header-msg"><span>Chiquinho</span> em 30/04/2013 10:01:02</div>
+							<div class="texto-msg">Maneiro!</div>
+						</div>
+
+						<div class="item-msg">
+							<div class="header-msg"><span>Chiquinho</span> em 28/04/2013 20:38:29</div>
+							<div class="texto-msg">Opa galera esse chat é show de bola. Estou me divertindo bastante.</div>
+						</div>
+
+						<div class="item-msg">
+							<div class="header-msg"><span>Zezinho</span> em 28/04/2013 21:08:15</div>
+							<div class="texto-msg">Queria falar muita coisa, mas não estou lembrando de nada para falar aqui... então vou dizer que esse projeto ficou chinfra negra... muito show de bola mesmo como eu nunca ví antes na minha vida toda inteirinha.</div>
+						</div>
+
+						<div class="item-msg">
+							<div class="header-msg"><span>Chiquinho</span> em 30/04/2013 10:01:02</div>
+							<div class="texto-msg">Maneiro!</div>
+						</div>
+					
+					</div>
+					
+					<div class="rolagem-automatica">
+						<input type="checkbox" name="rolagem" checked="checked">
+						<span>Rolagem automática</span>
+					</div>
+					
+					<div class="area-enviar">
+						<input id="envio-txt" type="text" name="envio" maxlength="210">	
+						<a id="enviar" href="#">enviar</a>					
+					</div>
+
+				</div>
+
+			</div>
+			
+		</div>
+		
+		<div class="footer">
+			<div class="footer-container">
+				<div class="nome-app">Tornado + WebSocket = Chat Web App</div>
+				<div class="versao">
+					<div class="texto-versao">Versão {{ versao }}</div>
+					<div class="num-versao">{{ data_versao }}</div>
+				</div>			
+			</div>
+		</div>	
+		
+		
+	</body>
+
+</html>
