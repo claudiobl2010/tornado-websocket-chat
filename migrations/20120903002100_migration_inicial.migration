@@ -2,7 +2,7 @@ SQL_UP = u"""
 
 CREATE TABLE chat_log (
 	id int unsigned NOT NULL AUTO_INCREMENT,
-	nickname varchar(20) NOT NULL,
+	nickname varchar(64) NOT NULL,
 	mensagem varchar(200) NOT NULL,
   	data TIMESTAMP NOT NULL DEFAULT NOW(),
 	PRIMARY KEY (id)

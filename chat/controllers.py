@@ -41,10 +41,15 @@ class ChatWebSocketHandler(WebSocketHandler):
             message_dict['qtd'] = len(self.waiters)
             self.write_message(message_dict)        
 
+        if message_dict['tipo'] == 'SAIR':
+            self.write_message(message_dict)        
+
         if message_dict['tipo'] == 'MSG':
-            message_dict['data'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
-            save_mensagens(message_dict['nickname'], message_dict['mensagem'], message_dict['data'])
+            now = datetime.now()
+            
+            save_mensagens(message_dict['nickname'], message_dict['mensagem'], now.strftime('%Y-%m-%d %H:%M:%S'))
+            
+            message_dict['data'] = now.strftime('%d/%m/%Y %H:%M:%S')
         
             for waiter in self.waiters:
                 waiter.write_message(message_dict)

@@ -124,16 +124,17 @@ img {
 
 
 .box-left .chat-img {
-    height: 93px;
+    height: 85px;
     margin-top: 15px;
-    width: 110px;
+    width: 100px;
 }
 
 .box-left .chat-txt {
-    color: #666666;
+    color: #333333;
     font-family: 'Londrina Shadow',cursive;
     font-size: 22px;
-    text-shadow: 2px 2px 10px #000000;	
+    text-shadow: 2px 2px 10px #000000;
+    margin-top: 5px;
 }
 
 .box-right {
@@ -174,7 +175,21 @@ img {
     width: 350px;	
 }
 
-.box-right .entrar-sair a {
+.box-right .entrar-sair .user-disabled {
+    border: 1px solid #CCDDCC;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 16px;
+    padding: 5px;
+    width: 350px;
+    background: #EEEEEE;
+}
+
+.box-right .entrar-sair .user.campo-em-branco {
+	border: 1px solid #BB3333;
+}
+
+.box-right .entrar-sair .entrar {
     background: #6E8B3D;
     border-radius: 5px;
     color: #FFFFFF;
@@ -186,8 +201,24 @@ img {
     width: 100px;
 }
 
-.box-right .entrar-sair a:hover {
+.box-right .entrar-sair .entrar:hover {
     background: #7EA03D;
+}
+
+.box-right .entrar-sair .sair {
+    background: #BB3333;
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    height: 22px;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+.box-right .entrar-sair .sair:hover {
+    background: #DD3333;
 }
 
 .box-right #msg {
@@ -242,7 +273,7 @@ img {
     margin-bottom: 40px;
 }
 
-.box-right .area-enviar input {
+.box-right .area-enviar .enviar-txt {
     border: 1px solid #CCDDCC;
     border-radius: 5px 5px 5px 5px;
     color: #666666;
@@ -251,7 +282,21 @@ img {
     width: 350px;
 }
 
-.box-right .area-enviar a {
+.box-right .area-enviar .enviar-txt.campo-em-branco {
+	border: 1px solid #BB3333;
+}
+
+.box-right .area-enviar .enviar-txt-disabled {
+    border: 1px solid #CCDDCC;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 16px;
+    padding: 5px;
+    width: 350px;
+    background: #EEEEEE;
+}
+
+.box-right .area-enviar .enviar-btn {
     background: #6E8B3D;
     border-radius: 5px;
     color: #FFFFFF;
@@ -263,6 +308,18 @@ img {
     width: 100px;
 }
 
-.box-right .area-enviar a:hover {
+.box-right .area-enviar .enviar-btn-disabled {
+    background: #CCCCCC;
+    border-radius: 5px;
+    color: #EEEEEE;
+    display: block;
+    float: right;
+    height: 22px;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+.box-right .area-enviar .enviar-btn:hover {
     background: #7EA03D;
 }

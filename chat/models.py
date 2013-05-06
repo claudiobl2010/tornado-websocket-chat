@@ -15,7 +15,7 @@ def get_db():
 
 def get_mensagens():
     db = get_db()
-    mensagens = db.query("SELECT * FROM chat_log ORDER BY data DESC LIMIT 20")
+    mensagens = db.query("SELECT * FROM chat_log ORDER BY data DESC LIMIT 40")
     mensagens.reverse()
     return mensagens
 
