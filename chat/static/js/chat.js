@@ -4,6 +4,22 @@ $(document).ready(function() {
 	var timerQTDUsers;
 	
 	$('#msg').scrollTop($('#msg')[0].scrollHeight);
+	
+	$(".page .page-container .box-right input[type='text']").blur(function() {
+		$(this).val(replaceAll($(this).val(), "<", ""));
+		$(this).val(replaceAll($(this).val(), ">", ""));
+		$(this).val(replaceAll($(this).val(), "\"", ""));
+		$(this).val(replaceAll($(this).val(), "'", ""));
+		$(this).val(replaceAll($(this).val(), "\t", " "));
+		$(this).val(replaceAll($(this).val(), "\n", " "));
+		$(this).val(replaceAll($(this).val(), "\r", " "));
+	});
+
+	$(".page .page-container .box-right input[type='text']").keypress(function(event) {
+        if ("<>'\"".indexOf(String.fromCharCode(event.which)) != -1) {
+            return false;
+        }
+	});
 
 	$(".entrar-sair").on("click", ".entrar", function() {
 		
@@ -14,7 +30,7 @@ $(document).ready(function() {
 			return false;
 		}
 		
-		ws = new WebSocket("ws://localhost:8989/chat");
+		ws = new WebSocket("ws://" + document.location.host + "/chat");
 
 		ws.onopen = function() {
 			$(".user").attr("disabled", "disabled");
