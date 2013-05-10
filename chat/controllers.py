@@ -6,21 +6,19 @@ import simplejson
 from tornado.web import RequestHandler
 from tornado.websocket import WebSocketHandler
 
+from chat import __version__, __release_date__
 from chat.models import *
 from datetime import datetime
 
 class HomeHandler(RequestHandler):
 
     def get(self):
-        
-        versao = "0.0.1"
-        data_versao = "MAI/2013"
-        
+
         mensagens = get_mensagens()
         
         self.render("home.html",
-                    versao=versao,
-                    data_versao=data_versao,
+                    versao=__version__,
+                    data_versao=__release_date__,
                     mensagens=mensagens)
 
 class ChatWebSocketHandler(WebSocketHandler):

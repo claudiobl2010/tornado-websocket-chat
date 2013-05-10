@@ -78,6 +78,10 @@ img {
     text-align: right;
 }
 
+.footer .footer-container .versao .num-versao {
+	text-transform: uppercase;
+}
+
 .page {
 	background: #F0FFF0;
 }
